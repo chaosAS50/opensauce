@@ -1,0 +1,12 @@
+C:\opensauce\Tabletime\Tabletime\bin\Debug\Tabletime.exe.config
+C:\opensauce\Tabletime\Tabletime\bin\Debug\Tabletime.exe
+C:\opensauce\Tabletime\Tabletime\bin\Debug\Tabletime.pdb
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.csproj.AssemblyReference.cache
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.csproj.SuggestedBindingRedirects.cache
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.Form1.resources
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.Form2.resources
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.Properties.Resources.resources
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.csproj.GenerateResource.cache
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.csproj.CoreCompileInputs.cache
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.exe
+C:\opensauce\Tabletime\Tabletime\obj\Debug\Tabletime.pdb

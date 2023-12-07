@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,18 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Tabletime.Properties.Resources._4663997;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 65);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // linkLabel5
             // 
@@ -70,7 +60,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(177, 274);
+            this.button1.Location = new System.Drawing.Point(140, 271);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 30);
@@ -88,6 +78,8 @@
             this.txtPassword.Size = new System.Drawing.Size(200, 22);
             this.txtPassword.TabIndex = 20;
             this.txtPassword.Text = "비밀번호를 입력해 주세요.";
+            this.txtPassword.Click += new System.EventHandler(this.textBox2_Click);
+            this.txtPassword.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // txtUsername
             // 
@@ -102,6 +94,8 @@
             this.txtUsername.Size = new System.Drawing.Size(200, 22);
             this.txtUsername.TabIndex = 19;
             this.txtUsername.Text = "아이디를 입력해 주세요.";
+            this.txtUsername.Click += new System.EventHandler(this.textBox1_Click);
+            this.txtUsername.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // label3
             // 
@@ -135,6 +129,16 @@
             this.label1.Size = new System.Drawing.Size(175, 31);
             this.label1.TabIndex = 15;
             this.label1.Text = "Time Table App";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tabletime.Properties.Resources._4663997;
+            this.pictureBox1.Location = new System.Drawing.Point(140, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
