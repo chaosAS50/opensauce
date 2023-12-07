@@ -42,6 +42,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Tabletime.Properties.Resources._4663997;
             this.pictureBox1.Location = new System.Drawing.Point(140, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 97);
