@@ -71,7 +71,7 @@ namespace Tabletime
         }
                 private void PlusButton_Click(object sender, EventArgs e)
         {
-
+            /*
             if (selectedCell != null) //셀 선택 됐을떄만 실행
             {
                 string newContent = TextBox.Text.Trim(); // 변경할 새로운 내용(trim이 텍스트박스 가져오는거)
@@ -83,7 +83,87 @@ namespace Tabletime
             {
                 MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
             }
-
+            */
+            string inputItem = TextBox.Text.Trim();
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            if (TimeTable.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
+                        cell.Value = inputItem;
+                        cell.Style.BackColor = randomColor;// 선택된 모든 셀에 값을 채움
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
+            }
         }
+        /*
+       private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
+       {
+           if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+           {
+               DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+               // 1행과 1열인 경우 (인덱스가 0일 때) 변경되지 않도록 경고 메시지 표시
+               if (e.RowIndex == 0 || e.ColumnIndex == 0)
+               {
+                   MessageBox.Show("이 셀은 변경할 수 없습니다.");
+                   return;
+               }
+
+               // 이하 선택된 셀에 내용을 변경하는 코드
+               string inputItem = secondGrade.SelectedItem.ToString();
+               if (clickedCell != null)
+               {
+                   string newContent = inputItem;
+                   clickedCell.Value = newContent;
+               }
+               else
+               {
+                   MessageBox.Show("셀을 먼저 선택하세요.");
+               }
+           }
+       }
+       */
+        private object selectedValue;
+        private Color a;
+
+        private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                selectedValue = clickedCell.Value; // 클릭된 셀의 값을 selectedValue에 저장
+            }
+        }
+
+        private void bt_delete_Click(object sender, EventArgs e)
+        {
+            if (TimeTable.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell cell in TimeTable.SelectedCells)
+                {
+                    // 1행과 1열은 변경할 수 없도록 제한
+                    if (cell.RowIndex != 0 && cell.ColumnIndex != 0)
+                    {
+                        a = TimeTable.DefaultCellStyle.BackColor;
+                        cell.Value = string.Empty;
+                        cell.Style.BackColor = a;// 선택된 모든 셀에 값을 채움
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
+            }
+        }
+
     }
 }
