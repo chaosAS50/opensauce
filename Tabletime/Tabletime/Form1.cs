@@ -49,12 +49,25 @@ namespace Tabletime
 
             if (username == "123" && password == "123")
             {
-
+                ShowTimetableForm();
             }
             else
             {
                 MessageBox.Show("로그인 실패. 아이디와 비밀번호를 확인하세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void ShowTimetableForm()
+        {
+            Form2 timetableForm = new Form2();
+
+            timetableForm.Show();
+
+            this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
