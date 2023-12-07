@@ -104,7 +104,34 @@ namespace Tabletime
                 MessageBox.Show("셀을 먼저 선택하세요."); // 선택된 셀이 없는 경우 메시지 표시
             }
         }
+        
+       private void TimeTable_CellClick_1(object sender, DataGridViewCellEventArgs e)
+       {
+           if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+           {
+               DataGridViewCell clickedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
+               // 1행과 1열인 경우 (인덱스가 0일 때) 변경되지 않도록 경고 메시지 표시
+               if (e.RowIndex == 0 || e.ColumnIndex == 0)
+               {
+                   MessageBox.Show("이 셀은 변경할 수 없습니다.");
+                   return;
+               }
+
+               // 이하 선택된 셀에 내용을 변경하는 코드
+               string inputItem = secondGrade.SelectedItem.ToString();
+               if (clickedCell != null)
+               {
+                   string newContent = inputItem;
+                   clickedCell.Value = newContent;
+               }
+               else
+               {
+                   MessageBox.Show("셀을 먼저 선택하세요.");
+               }
+           }
+       }
+       
         private object selectedValue;
         private Color a;
 
