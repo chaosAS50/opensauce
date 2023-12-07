@@ -69,7 +69,7 @@ namespace Tabletime
                 selectedCell = TimeTable.Rows[e.RowIndex].Cells[e.ColumnIndex]; //선택된 셀을 이걸로 바꿈
             }
         }
-        private void PlusButton_Click(object sender, EventArgs e)
+                private void PlusButton_Click(object sender, EventArgs e)
         {
 
             if (selectedCell != null) //셀 선택 됐을떄만 실행
@@ -83,7 +83,7 @@ namespace Tabletime
             {
                 MessageBox.Show("셀을 먼저 선택하세요."); //안됐으면 선택하라 뜸
             }
-          
+
         }
     }
 }
